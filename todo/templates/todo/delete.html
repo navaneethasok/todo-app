@@ -1,0 +1,31 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>todo app</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}"> 
+    </head>
+    <body>
+       <div class="center-column">
+            <h1>ToDo App : Delete</h1>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+                
+
+                <p class="item-row">Delete {{task}} ?</p>
+
+                
+                <input class="btn btn-sm btn-info" type='submit' name="edit task" value="Delete">
+                <a class="btn btn-sm btn-danger" href="{% url 'home' %}">Cancel</a>
+            </form>
+
+       </div>
+        
+        
+        
+    </body>
+     
+</html>
